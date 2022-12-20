@@ -1,0 +1,166 @@
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+</style>
+
+<br />
+<div class="container-fluid">
+  <div class="row" style="padding-left: 300px">
+    <form>
+      <div class="col-9 mt-5 shadow p-3 mb-5 bg-gray">
+        <table>
+          <tr>
+            <th>Data</th>
+            <th>Values</th>
+          </tr>
+          <tr>
+            <td>Bale Number</td>
+            <td>{{ data.uuid }}</td>
+          </tr>
+          <tr>
+            <td>Branch Name</td>
+            <td>{{ data.branchName }}</td>
+          </tr>
+          <tr>
+            <td>Center Name</td>
+            <td>{{ data.centerName }}</td>
+          </tr>
+          <tr>
+            <td>Crop Year</td>
+            <td>{{ data.cropYear }}</td>
+          </tr>
+          <tr>
+            <td>Ginner Name</td>
+            <td>{{ data.ginnerName }}</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>{{ data.address }}</td>
+          </tr>
+          <tr>
+            <td>Variety</td>
+            <td>{{ data.varity }}</td>
+          </tr>
+          <tr>
+            <td>Lot Number</td>
+            <td>{{ data.lotNo }}</td>
+          </tr>
+          <tr>
+            <td>divressWeight</td>
+            <td>{{ data.pressWeight }}</td>
+          </tr>
+          <tr>
+            <td>PressRunningNum</td>
+            <td>{{ data.pressRunningNum }}</td>
+          </tr>
+          <tr>
+            <td>PressMachineNumber</td>
+            <td>{{ data.pressMachineNumber }}</td>
+          </tr>
+          <tr>
+            <td>CCIHeapNo</td>
+            <td>{{ data.cciheapNo }}</td>
+          </tr>
+          <tr>
+            <td>CCIHeapDate</td>
+            <td>{{ data.cciheapDate }}</td>
+          </tr>
+        </table>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="text-center" >
+  <button class="btn btn-primary btn-block mb-4" (click)="hideUpdateFormFun()">Update</button>
+</div>
+
+<div class="container card col-md-12 alternative" [hidden]="hideUpdateForm">
+  <h2 style="text-align: center; margin-bottom: 20px; margin-top: 20px">
+    Update Bale Status
+  </h2>
+  <form [formGroup]="updateSatusForm" (ngSubmit)="onSubmit()">
+    <!-- Scan Location -->
+    <div class="form-group row">
+      <label for="scanLocation" class="col-sm-2 col-form-label"
+        >Scan Location</label
+      >
+      <div class="col-sm-8">
+        <input
+          type="text"
+          class="form-control"
+          id="scanLocation"
+          name="scanLocation"
+          formControlName="scanLocation"
+          title="scanLocation"
+        />
+      </div>
+      <br /><br />
+      <!-- Scan Status -->
+      <div class="form-group row">
+        <label for="scanStauts" class="col-sm-2 col-form-label"
+          >Scan Status</label
+        >
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            id="scanStatus"
+            name="scanStatus"
+            formControlName="scanStatus"
+            title="scanStatus"
+          />
+        </div>
+        <br /><br />
+        <!-- Bale Weight -->
+        <div class="form-group row">
+          <label for="weight" class="col-sm-2 col-form-label"
+            >Bale Weight</label
+          >
+          <div class="col-sm-8">
+            <input
+              type="text"
+              class="form-control"
+              id="weight"
+              name="weight"
+              formControlName="weight"
+              title="weight"
+            />
+          </div>
+          <br /><br />
+          <!-- Additional Remark -->
+          <div class="form-group row">
+            <label for="remark" class="col-sm-2 col-form-label"
+              >Additional Remark</label
+            >
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control"
+                id="remark"
+                name="remark"
+                formControlName="remark"
+                title="remark"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Submit button -->
+      <div class="text-center">
+        <br />
+        <button type="submit" class="btn btn-primary btn-block mb-4">
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

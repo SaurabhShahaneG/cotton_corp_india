@@ -1,0 +1,45 @@
+
+<div class="container-fluid" style="margin-top: 10px;"> 
+    <div class="row" >
+
+        
+        <!-- <div class="col-3">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle btn btn-primary btn-xs" data-toggle="dropdown">Locations</a>
+              
+            </div>
+        </div> -->
+       <h2 style="text-align: center ">List of All Bales</h2>
+        <div class="col-12">
+            <div class="row" style="padding-left:200px">
+                <div class="col-3 mt-5 shadow p-3 mb-5 bg-gray rounded" *ngFor="let list of listOfqr" style="margin: 10px;">
+                
+                    <div>
+                        branchName: {{list.branchName}}
+                    </div>
+                    <div>
+                        centerName : {{list.centerName}}
+                    </div>
+                    <div>
+                        cropYear : {{list.cropYear}}
+                    </div>
+                    <div>
+                        ginnerName : {{list.ginnerName}}
+                    </div>
+
+
+                    <div class="btn btn-primary btn-sm" (click)="setQrCodeUrl(list.uuid)">
+                        Get QR
+                    </div>
+                    
+                    <div class="btn btn-primary btn-sm" (click)="setUuid(list.uuid)" style="margin-left: 20px">
+                       View Details
+                    </div>
+                    <div class="btn btn-primary btn-sm" (click)="getTrackingDetails(list.uuid)" style="margin-left: 20px">
+                        Track
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

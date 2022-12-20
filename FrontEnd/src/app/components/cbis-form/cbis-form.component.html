@@ -1,0 +1,213 @@
+
+
+<div class="container card col-md-12 alternative" style="margin-top: 10px;">
+  <h2 style="text-align: center; margin-bottom: 20px; margin-top: 20px">
+    CBIS Form
+  </h2>
+  <form [formGroup]="cbisForm" (ngSubmit)="onSubmit()">
+    <!-- branchName -->
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label"
+        >Branch Name</label
+      >
+      <div class="col-sm-8">
+        <input
+          type="text"
+          class="form-control"
+          id="branchName"
+          name="branchName"
+          formControlName="branchName"
+        />
+      </div>
+    </div>
+    <br />
+
+    <!--  centerName -->
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label"
+        >Center Name</label
+      >
+      <div class="col-sm-8">
+        <input
+          type="text"
+          class="form-control"
+          id="centerName"
+          formControlName="centerName"
+          name="centerName"
+        />
+      </div>
+    </div>
+    <br />
+
+    <!--Crop Year-->
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Crop Year</label>
+      <div class="col-sm-8">
+        <input
+          type="text"
+          class="form-control"
+          id="cropYear"
+          formControlName="cropYear"
+          name="cropYear"
+        />
+      </div>
+    </div>
+    <br />
+
+    <!-- ginner Name -->
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label"
+        >Ginner Name</label
+      >
+      <div class="col-sm-8">
+        <input
+          type="text"
+          class="form-control"
+          id="ginnerName"
+          formControlName="ginnerName"
+          name="ginnerName"
+        />
+      </div>
+    </div>
+    <br />
+
+    <!--  Address-->
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Address</label>
+      <div class="col-sm-8">
+        <input
+          type="text"
+          class="form-control"
+          id="address"
+          formControlName="address"
+          name="address"
+        />
+      </div>
+    </div>
+    <br />
+
+    <!-- Variety Name -->
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label"> Variety</label>
+      <div class="col-sm-8">
+        <input
+          type="text"
+          class="form-control"
+          id="varity"
+          formControlName="varity"
+          name="varity"
+        />
+      </div>
+    </div>
+    <br />
+
+    <!-- Lot Number -->
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label"
+        >Lot Number</label
+      >
+      <div class="col-sm-8">
+        <input
+          type="text"
+          class="form-control"
+          id="lotNo"
+          formControlName="lotNo"
+          name="lotNo"
+        />
+      </div>
+    </div>
+    <br />
+
+    <!-- Press Weight  -->
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label"
+        >Press Weight</label
+      >
+      <div class="col-sm-8">
+        <input
+          type="text"
+          class="form-control"
+          id="pressWeight"
+          formControlName="pressWeight"
+          name="pressWeight"
+        />
+      </div>
+    </div>
+    <br />
+
+    <!-- Press Running Number -->
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label"
+        >Press Running Number</label
+      >
+      <div class="col-sm-8">
+        <input
+          type="text"
+          class="form-control"
+          id="pressRunningNum"
+          formControlName="pressRunningNum"
+          name="pressRunningNum"
+        />
+      </div>
+    </div>
+    <br />
+
+    <!-- Press Machine Number -->
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label"
+        >Press Machine Number</label
+      >
+      <div class="col-sm-8">
+        <input
+          type="text"
+          class="form-control"
+          id="pressMachineNumber"
+          formControlName="pressMachineNumber"
+          name="pressMachineNumber"
+        />
+      </div>
+    </div>
+    <br />
+
+    <!-- CCIHeapNo Number -->
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label"
+        >CCIHeapNo Number</label
+      >
+      <div class="col-sm-8">
+        <input
+          type="text"
+          class="form-control"
+          id="cciheapNo"
+          formControlName="cciheapNo"
+          name="cciheapNo"
+        />
+      </div>
+    </div>
+    <br />
+
+    <!-- CCIHeapNo date -->
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label"
+        >CCIHeap DATE</label
+      >
+      <div class="col-sm-8">
+        <input
+          type="date"
+          class="form-control"
+          id="cciheapDate"
+          formControlName="cciheapDate"
+          name="cciheapDate"
+        />
+      </div>
+    </div>
+    <br />
+
+    <!-- Submit button -->
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-block mb-4">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
