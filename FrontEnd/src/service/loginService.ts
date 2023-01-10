@@ -1,6 +1,8 @@
+import { UserResponse } from './../app/models/UserResponse';
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { list } from "src/app/models/list";
+import { Observable } from 'rxjs/internal/Observable';
 
 
 
@@ -14,10 +16,9 @@ export class loginService {
   userData: any;
   constructor(private http: HttpClient) { }
 
-  generateToken(credentials: any) {
+  generateToken(credentials: any):Observable<UserResponse> {
     //token generate
-
-    return this.http.post("http://10.210.8.140:8080/authenticate", credentials);
+    return this.http.post<UserResponse>("http://10.210.8.140:8080/authenticate", credentials);
   }
 
 
@@ -73,7 +74,7 @@ export class loginService {
 
   //for getting token
   getoken() {
-    sessionStorage.getItem('token');
+    sessionStorage.getItem('jwtToken');
   }
   getUuid() {
     return this.uuid;

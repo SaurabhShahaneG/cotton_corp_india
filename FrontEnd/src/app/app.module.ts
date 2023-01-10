@@ -20,7 +20,13 @@ import { QRCodeModule } from 'angular2-qrcode';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 import { BalesTrackingComponent } from './components/bales-tracking/bales-tracking.component';
-import { OnlyLoggedInUsersGuard } from './OnlyLoggedInUsersGuard'
+import { OnlyLoggedInUsersGuard } from './OnlyLoggedInUsersGuard';
+import { RoleManagementComponent } from './components/role-management/role-management.component'
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DropdownModule } from 'primeng/dropdown';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { ListUsersComponent } from './components/list-users/list-users.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +44,10 @@ import { OnlyLoggedInUsersGuard } from './OnlyLoggedInUsersGuard'
     LoginComponent,
     UserRegistrationComponent,
     BalesTrackingComponent,
-    
+    RoleManagementComponent,
+    UserDetailsComponent,
+    ListUsersComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -48,6 +57,10 @@ import { OnlyLoggedInUsersGuard } from './OnlyLoggedInUsersGuard'
     HttpClientModule,
     QRCodeModule,
     HotToastModule.forRoot(),
+    NgMultiSelectDropDownModule.forRoot(),
+    BrowserAnimationsModule,
+    DropdownModule
+
   ],
   providers: [OnlyLoggedInUsersGuard],
   bootstrap: [AppComponent]

@@ -1,0 +1,31 @@
+
+<div class="container-fluid" style="margin-top: 10px;">
+  <div class="row" >
+     <h2 style="text-align: center ">List of Users</h2>
+      <div class="col-12">
+          <div class="row" style="padding-left:200px">
+              <div class="col-3 mt-5 shadow p-3 mb-5 bg-gray rounded" *ngFor="let user of users" style="margin: 10px;">
+
+                  <div>
+                      User Name : {{user.userName}}
+                  </div>
+                  <div>
+                      First Name : {{user.userFirstName}}
+                  </div>
+                  <div>
+                      Last Name : {{user.userLastName}}
+                  </div>
+                  <div>
+                      Email : {{user.email}}
+                  </div>
+
+                  <div class="btn btn-primary btn-sm" (click)="viewDetails(user.userId)" style="margin-left: 20px">
+                     View Details
+                  </div>
+                  <div class="btn btn-primary btn-sm" (click)="editDetails(user.userId)" style="margin-left: 20px">
+                      Edit Details
+                   </div>
+              </div>
+          </div>
+      </div>
+  </div>

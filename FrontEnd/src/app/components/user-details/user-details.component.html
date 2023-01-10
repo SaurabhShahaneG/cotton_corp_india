@@ -1,0 +1,51 @@
+
+
+<div class="container card col-md-4 alternative" style="margin-top: 10px;">
+  <h2 style="text-align: center; margin-bottom: 20px; margin-top: 20px;"> User Details</h2>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <!-- User Name input -->
+      <div class="form-outline mb-4">
+          <label class="form-label" for="userName">User Name</label>
+          <input type="text" id="userName" class="form-control" name="userName"  formControlName="userName"  />
+
+      </div>
+      <!-- User first Name input -->
+      <div class="form-outline mb-4">
+          <label class="form-label" for="userFirstName">User First Name</label>
+          <input type="text" id="userFirstName" class="form-control" name="userFirstName" formControlName="userFirstName" />
+
+      </div>
+       <!-- User last Name input -->
+       <div class="form-outline mb-4">
+          <label class="form-label" for="userLastName">User Last Name</label>
+          <input type="text" id="userLastName" class="form-control" name="userLastName" formControlName="userLastName"/>
+
+      </div>
+       <!-- User email input -->
+       <div class="form-outline mb-4">
+        <label class="form-label" for="email">Email</label>
+        <input type="text" id="email" class="form-control" name="email" formControlName="email" />
+
+    </div>
+
+
+
+    <div class="form-group form-check" *ngFor="let r of assignedRoles">
+      <input type="checkbox" formArrayName="role" id="role" class="form-check-input" [value]="r" (change)="checkboxChange($event,r)" checked/>
+      <label for="role" class="form-check-label">{{r.roleName}}</label>
+  </div>
+  <div class="form-outline mb-4" >
+    <ng-container formArrayName="role">
+      <div class="form-group form-check" *ngFor="let r of availableRoles" >
+        <input type="checkbox" id="role" class="form-check-input" [value]="r" (change)="checkboxChange($event,r)"/>
+        <label for="role" class="form-check-label">{{r.roleName}}</label>
+    </div>
+    </ng-container>
+
+  </div>
+      <!-- Submit button -->
+      <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-block mb-4">Submit</button>
+  </div>
+  </form>
+</div>

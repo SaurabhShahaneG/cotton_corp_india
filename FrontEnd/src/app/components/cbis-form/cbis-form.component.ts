@@ -33,18 +33,18 @@ export class CBISFormComponent implements OnInit {
   ngOnInit(): void {
 
     this.cbisForm = this.fb.group({
-      branchName: ['', ],
-      centerName: ['',],
-      cropYear: ['', ],
-      ginnerName: ['',],
-      address: ['',],
-      varity: ['',],
-      lotNo: ['',],
-      pressWeight: ['',],
-      pressRunningNum: ['',],
-      pressMachineNumber: ['',],
-      cciheapNo: ['',],
-      cciheapDate: ['',],
+      branchName: ['' ],
+      centerName: [''],
+      cropYear: [''],
+      ginnerName: [''],
+      address: [''],
+      varity: [''],
+      lotNo: [''],
+      pressWeight: [''],
+      pressRunningNum: [''],
+      pressMachineNumber: [''],
+      cciheapNo: [''],
+      cciheapDate: [''],
     });
   }
 

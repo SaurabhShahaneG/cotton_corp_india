@@ -8,7 +8,7 @@ import { loginService } from 'src/service/loginService';
 export class NavbarComponent {
 
   public loggedIn = false;
- 
+
 
   constructor(private loginServ : loginService) { }
 
@@ -22,11 +22,7 @@ export class NavbarComponent {
   logoutUser(){
      this.loginServ.logout();
      location.reload();
-    
+
   }
 
-  passValue(value : string){
-    console.log(value);
-   
-  }
 }

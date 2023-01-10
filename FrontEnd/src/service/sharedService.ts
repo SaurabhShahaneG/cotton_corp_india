@@ -13,10 +13,10 @@ export class SharedService {
 
   setMessage(data1: any)
   {
-    
+
     this.uuid_response=data1;
     console.log("in shared service set data",this.uuid_response);
-  
+
   }
   getMessage(){
     console.log("in shared service getmessage this.uuid", this.uuid_response);

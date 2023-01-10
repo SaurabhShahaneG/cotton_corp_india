@@ -1,3 +1,4 @@
+import { ListUsersComponent } from './components/list-users/list-users.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BalesTrackingComponent } from './components/bales-tracking/bales-tracking.component';
@@ -9,6 +10,7 @@ import { QrCodeComponent } from './components/qr-code/qr-code.component';
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 import { ViewDetailsComponent } from './components/view-details/view-details.component';
 import { OnlyLoggedInUsersGuard } from './OnlyLoggedInUsersGuard'
+import { UserDetailsComponent } from './components/user-details/user-details.component';
 
 
 const routes: Routes = [
@@ -26,8 +28,8 @@ const routes: Routes = [
     component: CBISFormComponent,
     canActivate : [OnlyLoggedInUsersGuard]
   },
-  
- 
+
+
   {
     path: 'list',
     component: ListComponent,
@@ -61,9 +63,19 @@ const routes: Routes = [
     path : 'balesTracking',
     component : BalesTrackingComponent,
     canActivate : [OnlyLoggedInUsersGuard]
+  },
+  {
+    path : 'roleManagement',
+    component : ListUsersComponent,
+    canActivate : [OnlyLoggedInUsersGuard]
+  },
+  {
+    path : 'userDetails',
+    component : UserDetailsComponent,
+    canActivate : [OnlyLoggedInUsersGuard]
   }
-  
-  
+
+
 ];
 
 @NgModule({
